@@ -10,7 +10,7 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
    │           │          │              │           │               │               │
    ▼           ▼          ▼              ▼           ▼               ▼               ▼
  Discovery   Deliverable Diagrams     Fluent SDK  SDK Install     Deliverable     + Demo HTML
- Notes       + Spec.md   + Flows      .now.ts     Playwright      + Briefing      GIF/Video  
+ Notes       + Spec.md   + Flows      .now.ts     Playwright      + Briefing      Deck        
  Narratives  CLAUDE.md   OOB Mapping  Iteration   Data Check      Clickthrough    Social Card
 ```
 
