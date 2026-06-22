@@ -9,9 +9,9 @@
 IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ──> DOCUMENTATION ──> PRESENTATION
    │           │          │              │           │               │               │
    ▼           ▼          ▼              ▼           ▼               ▼               ▼
- Discovery   Whitepaper  Diagrams     Fluent SDK  Playwright      Whitepaper      Social Card
- Notes       + Spec.md   + Flows      .now.ts     + SDK Install   + Briefing      + Demo HTML
- Narratives  CLAUDE.md   OOB Mapping  Iteration   Data Check      Clickthrough    GIF/Video
+ Discovery   Deliverable Diagrams     Fluent SDK  SDK Install     Deliverable     + Demo HTML
+ Notes       + Spec.md   + Flows      .now.ts     Playwright      + Briefing      GIF/Video  
+ Narratives  CLAUDE.md   OOB Mapping  Iteration   Data Check      Clickthrough    Social Card
 ```
 
 ---
@@ -46,26 +46,26 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
 **What happens:** Transform discovery into structured architecture document + per-build spec files.
 
 **Artifacts produced:**
-- Architecture whitepaper (as-is/to-be)
+- Architecture deliverable (as-is/to-be)
 - `spec.md` (per build directory) - scoped build instructions for the agent
 - `CLAUDE.md` - hard rules and constraints for agent behavior
 - Mermaid diagrams (`diagrams/*.mmd` to `diagrams/*.png`)
 - `generic/` variant - anonymised version for reuse
 
 **Agent routing:**
-- Claude Code (primary) for whitepaper drafting
+- Claude Code (primary) for deliverable drafting
 - Cascade for diagram generation and HTML rendering
 - SN orchestrator<sup>[1]</sup> for engagement analysis, product mapping, OOB feature identification, and build approach recommendation. The orchestrator can also configure and build directly via MCP - in this pipeline it operates in advisory mode during early phases and shifts to execution mode from Phase 4 onward.
 
 **Decision gate:** Architecture approval before build begins.
-- [ ] Whitepaper covers as-is + to-be
+- [ ] Deliverable covers as-is + to-be
 - [ ] Diagrams exported (Mermaid source + PNG)
 - [ ] spec.md written per build condition
 - [ ] CLAUDE.md hard rules defined (Fluent only? MCP allowed? REST for config only?)
 - [ ] Component mapping done (CSM tables, PSDS flows, etc.)
 
 **Known pitfalls:**
-- Whitepaper scope creep - keep it to what matters for the build
+- Deliverable scope creep - keep it to what matters for the build
 - Diagram versioning: `diagram_1.mmd`, `diagram_1a.mmd` - use suffixes for variants, not separate numbering
 - Generic/anonymised version should be created alongside, not after
 - `spec.md` must be agent-readable: structured, no ambiguity, explicit about what to create vs. what exists
@@ -177,7 +177,7 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
 **What happens:** Generate stakeholder-facing deliverables from the build.
 
 **Artifacts produced:**
-- Architecture whitepaper (final version)
+- Architecture deliverable (final version)
 - Demo Clickthrough HTML
 - Executive Briefing HTML
 - Update sets (XML, if MCP path)
@@ -189,7 +189,7 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
 - Mermaid to PNG pipeline for final diagrams
 
 **Decision gate:** Deliverable complete.
-- [ ] Whitepaper final
+- [ ] Deliverable final
 - [ ] HTML renders correctly (test in browser)
 - [ ] All diagrams current
 - [ ] Archive contains session artifacts
@@ -235,7 +235,7 @@ Does the task touch a ServiceNow instance?
 |   |   It can plan, build, configure, validate, and document.
 |   |   Claude Code / Cascade assist for:
 |   |     - Local file generation (Fluent SDK .now.ts files)
-|   |     - Non-SN artifacts (whitepapers, diagrams, social cards)
+|   |     - Non-SN artifacts (deliverables, diagrams, social cards)
 |   |     - Tasks the orchestrator cannot reach (local filesystem, non-SN APIs)
 |   |
 |   +-- NO: Use Claude Code + now-sdk-explain + ServiceNowDocs repo.
@@ -261,7 +261,7 @@ project-root/
 ├── CLAUDE.md                    # Hard rules for agents
 ├── spec.md                      # Build specification
 ├── additional_notes.md          # Freeform context
-├── *-Whitepaper.md              # Architecture doc
+├── *-Deliverable.md             # Architecture doc
 ├── *-Architecture.html          # Rendered version
 ├── diagrams/
 │   ├── diagram_N.mmd           # Mermaid source
