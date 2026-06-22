@@ -11,7 +11,7 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
    ▼           ▼          ▼              ▼           ▼               ▼               ▼
  Discovery   Deliverable Diagrams     Fluent SDK  SDK Install     Deliverable     Deck        
  Notes       + Spec.md   + Flows      .now.ts     Playwright      + Briefing      Demo        
- Narratives  agent.md   OOB Mapping  Iteration   Data Check      Clickthrough    Social Card
+ Narratives  Agent.md   OOB Mapping  Iteration   Data Check      Clickthrough    Social Card
 ```
 
 ---
@@ -48,7 +48,7 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
 **Artifacts produced:**
 - Architecture deliverable (as-is/to-be)
 - `spec.md` (per build directory) - scoped build instructions for the agent
-- `agent.md` - hard rules and constraints for agent behavior
+- `Agent.md` - hard rules and constraints for agent behavior
 - Mermaid diagrams (`diagrams/*.mmd` to `diagrams/*.png`)
 - `generic/` variant - anonymised version for reuse
 
@@ -61,7 +61,7 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
 - [ ] Deliverable covers as-is + to-be
 - [ ] Diagrams exported (Mermaid source + PNG)
 - [ ] spec.md written per build condition
-- [ ] agent.md hard rules defined (Fluent only? MCP allowed? REST for config only?)
+- [ ] Agent.md hard rules defined (Fluent only? MCP allowed? REST for config only?)
 - [ ] Component mapping done (CSM tables, PSDS flows, etc.)
 
 **Known pitfalls:**
@@ -118,7 +118,7 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
 
 **Build loop:**
 ```
-1. Agent reads spec.md + agent.md
+1. Agent reads spec.md + Agent.md
 2. Agent reads memory files (project context, user preferences, feedback)
 3. Agent scaffolds structure
 4. Agent creates artifacts iteratively
@@ -139,7 +139,7 @@ IDEATION ──> SPEC ──> ARCHITECTURE ──> BUILD ──> VALIDATION ─�
 - **SDK documentation gaps:** Agent may hallucinate Fluent API patterns - use `now-sdk-explain` to verify
 - **Memory staleness:** Memory files from prior sessions may reference outdated decisions
 - **Bot simulation traps:** When replacing RPA, do not replicate bot logic - reimagine the workflow
-- **Scope discipline:** Constraints vary per project - enforce via agent.md
+- **Scope discipline:** Constraints vary per project - enforce via Agent.md
 - **Recursive correction loops:** Agent fixates on literal word interpretation - redirect with intent
 - **Instance connectivity:** Do not research SDK docs until instance is connected and ready
 
@@ -258,7 +258,7 @@ Does the task touch a ServiceNow instance?
 ### Fluent SDK Project Structure
 ```
 project-root/
-├── agent.md                    # Hard rules for agents
+├── Agent.md                    # Hard rules for agents
 ├── spec.md                      # Build specification
 ├── additional_notes.md          # Freeform context
 ├── *-Deliverable.md             # Architecture doc
