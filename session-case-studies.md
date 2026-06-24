@@ -115,9 +115,7 @@ All 12 corrections appear in the social content creation phase:
 - GIF dimensions, frame timing, colour scheme
 - LinkedIn post copy: 8 rounds of revision to remove AI-sounding language
 - Platform constraints the agent did not know (LinkedIn has no title field)
-- Competitive sensitivity: "Do not add inputs which can be screenshot by competitors"
-- External timing: awareness of industry events that affect posting timing
-
+  
 ### Outcome
 
 Published to GitHub with README, comparison GIF, and LinkedIn post. The analysis was solid. The packaging required extensive human iteration.
