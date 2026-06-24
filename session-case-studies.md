@@ -17,7 +17,7 @@ Build the same ServiceNow Debt Management app twice using Fluent SDK. Condition 
 
 **Experiment design:** User drives key decisions. Agent adjusts. "Can we just have Condition A ignore headroom? What is the point of having headroom compress available if it does not call it?" - valid design question, properly handled.
 
-**Social content strategy:** User applies cross-project learning: "I led with the experimental group [in a prior project]. It gained abysmal engagement because I did not start with the hype finding." Agent incorporates this into the card design.
+**Social content strategy:** User applies cross-project learning: "I led with the experiment outcome without a strong "so what" in publishing socials for [a prior project]. It gained abysmal engagement because I did not start with the hype finding." Agent incorporates this into the card design.
 
 ### What Went Wrong
 
