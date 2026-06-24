@@ -113,8 +113,8 @@ Key findings emerged from this structured dialogue:
 
 All 12 corrections appear in the social content creation phase:
 - GIF dimensions, frame timing, colour scheme
-- LinkedIn post copy: 8 rounds of revision to remove AI-sounding language
-- Platform constraints the agent did not know (LinkedIn has no title field)
+- LinkedIn post copy: 8 rounds of revision to simplify complex findings and remove AI-sounding language
+- Platform constraints the agent did not know
   
 ### Outcome
 
